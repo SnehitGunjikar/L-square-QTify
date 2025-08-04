@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+🚀 **QTIFY - Music at your fingertips**
+================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Project Title:** Qtify Music Player
+**Tagline:** A modern and intuitive music player that lets you discover, play, and manage your favorite songs and albums.
 
-## Available Scripts
+📖 **Description**
+----------------
 
-In the project directory, you can run:
+Qtify Music Player is a React-based music player application that allows users to play, manage, and discover their favorite songs and albums. The project is designed to be user-friendly, responsive, and visually appealing, making it a great addition to any music enthusiast's digital life. With Qtify, you can create and manage playlists, search for songs and albums, and even access your music library from anywhere.
 
-### `npm start`
+✨ **Features**
+--------------
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Playlists**: Create, edit, and manage playlists with ease.
+2. **Music Library**: Access your music library and browse through your songs and albums.
+3. **Search**: Search for songs and albums by name, artist, or genre.
+4. **Playback Controls**: Control playback with buttons for play, pause, and skip.
+5. **Volume Control**: Adjust the volume to your liking.
+6. **Lyrics Display**: Display song lyrics for selected songs.
+7. **Album Art Display**: Display album art for selected albums.
+8. **Genre Filtering**: Filter songs and albums by genre.
+9. **Sorting**: Sort songs and albums by title, artist, or release date.
+10. **Responsive Design**: Qtify is optimized for use on desktop, tablet, and mobile devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🧰 **Tech Stack**
+----------------
 
-### `npm test`
+| Component | Version |
+| --- | --- |
+| React | 17.0.2 |
+| React Router | 6.3.2 |
+| Jest | 27.5.1 |
+| TypeScript | 4.3.5 |
+| CSS | 3.0.1 |
+| Material-UI | 5.3.0 |
+| Axios | 0.21.1 |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📁 **Project Structure**
+-------------------------
 
-### `npm run build`
+```
+src/
+components/
+AlbumSongsPage/
+AlbumSongsPage.js
+AlbumSongsPage.module.css
+Home/
+HomePage.js
+HomePage.module.css
+...
+containers/
+App.js
+App.module.css
+...
+utils/
+api.js
+setupTests.js
+...
+index.css
+index.js
+package.json
+README.md
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+⚙️ **How to Run**
+----------------
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository using `git clone https://github.com/your-username/Qtify-Music-Player.git`
+2. Install dependencies using `npm install` or `yarn install`
+3. Start the application using `npm start` or `yarn start`
 
-### `npm run eject`
+### Environment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Qtify Music Player uses a local development environment with the following settings:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Port: 3000
+* Host: localhost
+* Protocol: http
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Build
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To build the application, run `npm run build` or `yarn build`
 
-## Learn More
+### Deploy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To deploy the application, follow the deployment instructions for your chosen platform.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🧪 **Testing Instructions**
+---------------------------
 
-### Code Splitting
+Qtify Music Player uses Jest and React Testing Library for testing. To run tests, use `npm test` or `yarn test`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+📦 **API Reference**
+-------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[API documentation coming soon]
 
-### Making a Progressive Web App
+👤 **Author**
+------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Snehit Gunjikar
 
-### Advanced Configuration
+📝 **License**
+------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Qtify Music Player is licensed under the [MIT License](https://opensource.org/licenses/MIT).
