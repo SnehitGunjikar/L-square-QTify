@@ -1,6 +1,9 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy Node.js app to Azure Web App - Qtify
 
 on:
@@ -13,7 +16,7 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read # Required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -23,13 +26,19 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: npm install, build, and test
+      - name: Install dependencies including missing babel plugin
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
-      
+          npm install --save-dev @babel/plugin-proposal-private-property-in-object
+
+      - name: Run build script (if present)
+        run: npm run build --if-present
+
+      - name: Run tests with detectOpenHandles
+        run: npm test -- --watchAll=false --detectOpenHandles
+
       - name: Upload artifact for deployment job
+        if: success()  # Only upload artifacts if build & tests succeed
         uses: actions/upload-artifact@v4
         with:
           name: node-app
@@ -39,8 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
+      id-token: write # Required for requesting the JWT
+      contents: read  # Required for actions/checkout
 
     steps:
       - name: Download artifact from build job
@@ -55,11 +64,12 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E40A182FC5164213B1E8FFF473AE59B4 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7F5B5AACAC824706B13EBD598F8B1449 }}
 
-      - name: 'Deploy to Azure Web App'
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'Qtify'
           slot-name: 'Production'
           package: .
+
           
